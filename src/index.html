@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productivity Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <nav>
+        <h1>Productivity <span>Dashboard</span></h1>
+        <button>Change Theme <i class="ri-moon-clear-line"></i></button>
+      </nav>
+
+      <div class="weather">
+        <img src="/assets/pexels-vividcafe-681391.jpg" alt="" />
+        <div class="weather-details">
+          <div class="temp">
+            <h1></h1>
+            <h3></h3>
+          </div>
+          <div class="weather-right">
+            <div class="humidity">
+              <img src="/assets/humidity.png" alt="" />
+              <div>
+                <h3 id="humidity"></h3>
+                <h3>Humidity</h3>
+              </div>
+            </div>
+            <div class="speed">
+              <img src="/assets/wind.png" alt="" />
+              <div>
+                <h3 id="speed"></h3>
+                <h3>Wind Speed</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="allElems">
+        <div class="elems" id="0">
+          <img src="/assets/to do.avif" alt="" />
+          <h1>To Do List</h1>
+        </div>
+        <div class="elems" id="1">
+          <img src="/assets/planner.avif" alt="" />
+          <h1>Daily Planner</h1>
+        </div>
+        <div class="elems" id="2">
+          <img src="/assets/mot1.jpg" alt="" />
+          <h1>Motivation</h1>
+        </div>
+        <div class="elems" id="3">
+          <img src="/assets/pomodoro.avif" alt="" />
+          <h1>Pomodoro</h1>
+        </div>
+        <div class="elems" id="4">
+          <img src="/assets/goals.avif" alt="" />
+          <h1>Daily Goals</h1>
+        </div>
+      </section>
+      <section class="fullPage to-do-page">
+        <div class="pageTop">
+          <h1>To do List</h1>
+          <span class="back" id="0">Close</span>
+        </div>
+        <div class="to-do-pageCenter">
+          <div class="left-Tasks">
+            <div class="input-tasks">
+              <input type="text" id="task-input" placeholder="Add new Task*" />
+            </div>
+
+            <div class="editable taskDetails" contenteditable="true">
+              Enter your details here...
+            </div>
+            <button>Add Task</button>
+          </div>
+          <div class="right-Tasks">
+            <ul></ul>
+          </div>
+        </div>
+      </section>
+      <section class="fullPage daily-planner">
+        <div class="pageTop">
+          <h1>Daily Planner</h1>
+          <span class="back" id="1">Close</span>
+        </div>
+
+        <div class="container"></div>
+      </section>
+      <section class="fullPage motivation">
+        <div class="pageTop">
+          <h1>Motivation</h1>
+          <span class="back" id="2">Close</span>
+        </div>
+        <div class="daily-quotes">
+          <div class="quotes-box">
+            <div class="content">
+              <i class="ri-double-quotes-l left-q"></i>
+              <div>
+                <p></p>
+
+                <h3></h3>
+              </div>
+              <i class="ri-double-quotes-r right-q"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="fullPage pomodoro-timer">
+        <div class="pageTop">
+          <h1>Pomodoro</h1>
+          <span class="back" id="3">Close</span>
+        </div>
+        <div class="timer">
+          <h1>25:00</h1>
+          <button id="start-btn">Start</button>
+          <button id="pause-btn">Pause</button>
+          <button id="reset-btn">Reset</button>
+        </div>
+      </section>
+
+      <section class="fullPage daily-goals">
+        <div class="pageTop">
+          <h1>Daily Goals</h1>
+          <span class="back" id="goals-close">Close</span>
+        </div>
+
+        <div class="goal-wrapper">
+          <form id="goal-form">
+            <input type="text" id="goal-input" placeholder="Today's Goal..." />
+            <input
+              type="text"
+              id="why-input"
+              placeholder="Why is it important?"
+            />
+            <button type="submit">Add Goal</button>
+          </form>
+
+          <div class="progress-bar">
+            <div class="bar"></div>
+            <span class="progress-text">0% Complete</span>
+          </div>
+
+          <ul class="goal-list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
